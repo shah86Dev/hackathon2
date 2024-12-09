@@ -15,6 +15,7 @@ import TopBar from "./component/TopBar";
 
 
 
+
 export default function Home() {
   return (
     <>
@@ -23,6 +24,7 @@ export default function Home() {
       </Head>
       <main>
         <HeroSection />
+        
         <CompanyLogos/>
         <FeaturedSec/>
         <TopCategories/>

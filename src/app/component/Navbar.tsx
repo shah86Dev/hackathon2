@@ -9,7 +9,7 @@ const Navbar: FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gray-50 shadow-sm">
+    <header className="bg-gray-50 shadow-sm pr-40 pl-40">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Navbar */}
         <div className="flex justify-between items-center py-4">
@@ -27,13 +27,15 @@ const Navbar: FC = () => {
           {/* Right - Cart & Hamburger */}
           <div className="flex items-center space-x-4">
             {/* Cart */}
-            <button className="relative hidden md:flex items-center bg-white border rounded-full px-4 py-2 shadow-sm hover:bg-gray-100">
-              <ShoppingCart className="w-5 h-5 text-gray-800 mr-2" />
-              <span className="text-gray-800 font-medium">Cart</span>
-              <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-teal-500 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
-                2
-              </span>
-            </button>
+            <Link href="/cart">
+              <button className="relative hidden md:flex items-center bg-white border rounded-full px-4 py-2 shadow-sm hover:bg-gray-100">
+                <ShoppingCart className="w-5 h-5 text-gray-800 mr-2" />
+                <span className="text-gray-800 font-medium">Cart</span>
+                <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-teal-500 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
+                  2
+                </span>
+              </button>
+            </Link>
 
             {/* Hamburger Menu */}
             <button
@@ -53,45 +55,45 @@ const Navbar: FC = () => {
         <div
           className={`${
             menuOpen ? "block" : "hidden"
-          } md:flex justify-between items-center py-4 border-t border-gray-200`}
+          } md:flex flex-col md:flex-row md:justify-between items-start md:items-center py-4 border-t border-gray-200`}
         >
           {/* Left Links */}
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
-            <a
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 w-full md:w-auto">
+            <Link
               href="/"
               className="text-gray-500 font-medium hover:text-teal-600 hover:underline"
             >
               Home
-            </a>
-            <a
+            </Link>
+            <Link
               href="/Shop"
               className="text-gray-500 font-medium hover:text-teal-600 hover:underline"
             >
               Shop
-            </a>
-            <a
-              href="./ProductPage"
+            </Link>
+            <Link
+              href="/ProductPage"
               className="text-gray-500 font-medium hover:text-teal-600 hover:underline"
             >
               Product
-            </a>
-            <a
+            </Link>
+            <Link
               href="/ContactUs"
               className="text-gray-500 font-medium hover:text-teal-600 hover:underline"
             >
               Pages
-            </a>
-            <a
-              href="/About"
+            </Link>
+            <Link
+              href="/AboutSection"
               className="text-gray-500 font-medium hover:text-teal-600 hover:underline"
             >
               About
-            </a>
+            </Link>
           </div>
 
           {/* Right Contact */}
-          <div className="mt-4 md:mt-0">
-            <span className="text-gray-500 font-medium">
+          <div className="mt-4 md:mt-0 w-full md:w-auto">
+            <span className="text-gray-500 font-medium block md:inline">
               Contact:{" "}
               <a
                 href="tel:+923002023688"

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const NewsletterInstagram: React.FC = () => {
   return (
-    <section className="bg-gray-400 text-white py-12">
+    <section className="bg-gray-400 text-white py-12 pr-40 pl-40">
       {/* Newsletter Section */}
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-2xl font-bold mb-6">Or Subscribe To The Newsletter</h2>
@@ -36,8 +36,8 @@ const NewsletterInstagram: React.FC = () => {
         <h2 className="text-2xl font-bold mb-6">
           Follow Products And Discounts On Instagram
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-          {["/product1.jpg", "/product2.jpg", "/product3.jpg", "/product4.jpg", "/product5.jpg"].map((image, index) => (
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 ">
+          {["/p1.jpg", "/p2.png", "/p3.png", "/p4.png", "/ti1.png" ,"/ti2.png"].map((image, index) => (
             <div key={index} className="overflow-hidden rounded-lg">
               <Image
                 src={image}
