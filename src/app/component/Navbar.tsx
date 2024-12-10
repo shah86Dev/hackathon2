@@ -27,13 +27,14 @@ const Navbar: FC = () => {
           {/* Right - Cart & Hamburger */}
           <div className="flex items-center space-x-4">
             {/* Cart */}
-            <Link href="/cart">
+            <Link href="/CartPage">
               <button className="relative hidden md:flex items-center bg-white border rounded-full px-4 py-2 shadow-sm hover:bg-gray-100">
                 <ShoppingCart className="w-5 h-5 text-gray-800 mr-2" />
-                <span className="text-gray-800 font-medium">Cart</span>
+               <span className="text-gray-800 font-medium">Cart</span>
                 <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-teal-500 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
                   2
                 </span>
+                
               </button>
             </Link>
 
@@ -66,7 +67,7 @@ const Navbar: FC = () => {
               Home
             </Link>
             <Link
-              href="/Shop"
+              href="/ProductPage"
               className="text-gray-500 font-medium hover:text-teal-600 hover:underline"
             >
               Shop

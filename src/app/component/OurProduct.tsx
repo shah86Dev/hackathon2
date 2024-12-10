@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart } from "lucide-react";
+import Link from "next/link";
 
 const products = [
   {
@@ -53,7 +54,7 @@ const products = [
   },
   {
     id: 7,
-    imageUrl: "/image9.png",
+    imageUrl: "/Image9.png",
     title: "Library Stool Chair",
     price: "$20",
     originalPrice: null,
@@ -75,6 +76,8 @@ const OurProducts = () => {
       <h2 className="text-3xl font-bold mb-6 text-center text-gray-900">
         Our Products
       </h2>
+      <div>
+        
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map((product) => (
           <div
@@ -122,14 +125,20 @@ const OurProducts = () => {
 
               {/* Add to Cart Button */}
               <div className="mt-4 flex justify-end">
+                <Link href="/CartPage">
                 <Button variant="outline" size="icon">
                   <ShoppingCart className="hover:text-teal-500" />
                 </Button>
+                </Link>
               </div>
             </div>
           </div>
         ))}
+        
       </div>
+      
+      </div>
+      
     </section>
   );
 };
