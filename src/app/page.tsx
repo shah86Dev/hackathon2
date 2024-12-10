@@ -1,6 +1,5 @@
 
 import Head from "next/head";
-import Navbar from "./component/Navbar";
 import HeroSection from "./component/HeroSection";
 import Footer from "./component/Footer";
 import { use } from "react";
@@ -9,10 +8,7 @@ import CompanyLogos from "./component/CompanyLogos";
 import TopCategories from "./component/TopCatagory";
 import HotCategory from "./component/HotCategory";
 import OurProducts from "./component/OurProduct";
-import TopBar from "./component/TopBar";
-
-
-
+import Image from "next/image";
 
 
 
@@ -20,11 +16,12 @@ export default function Home() {
   return (
     <>
       <Head>
+        
         <title>Comforty - Furniture Store</title>
       </Head>
       <main>
-        <HeroSection />
         
+        <HeroSection />
         <CompanyLogos/>
         <FeaturedSec/>
         <TopCategories/>

@@ -23,13 +23,13 @@ const ServiceFeatures: React.FC = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-12 pr-40 pl-40">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-8">
+    <section className="bg-gray-50 py-12 px-4 sm:px-8 lg:px-40">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="flex flex-col items-center sm:flex-row sm:items-start gap-4 text-center sm:text-left"
+              className="flex flex-col items-center sm:items-start text-center sm:text-left gap-4"
             >
               <div className="p-4 bg-gray-100 rounded-full">{feature.icon}</div>
               <div>

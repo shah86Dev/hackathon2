@@ -2,10 +2,11 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+
 const ContactForm: React.FC = () => {
   return (
-    <section className="bg-white py-12 pr-40 pl-40">
-      <div className="container mx-auto px-4">
+    <section className="bg-white py-12 px-4 sm:px-8 lg:px-40">
+      <div className="container mx-auto">
         <h2 className="text-2xl font-bold mb-6 text-center">Get In Touch With Us</h2>
         <p className="text-center text-gray-500 mb-12">
           For more information about our product & services, please feel free to drop us an email.
@@ -46,10 +47,10 @@ const ContactForm: React.FC = () => {
 
           {/* Contact Form */}
           <div className="flex-1 space-y-4">
-            <Input placeholder="Your name" />
-            <Input placeholder="Email address" />
-            <Input placeholder="Subject (optional)" />
-            <Textarea placeholder="Message" />
+            <Input placeholder="Your name" className="w-full" />
+            <Input placeholder="Email address" className="w-full" />
+            <Input placeholder="Subject (optional)" className="w-full" />
+            <Textarea placeholder="Message" className="w-full" />
             <Button className="w-full">Submit</Button>
           </div>
         </div>

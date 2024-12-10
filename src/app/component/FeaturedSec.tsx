@@ -32,17 +32,22 @@ const FeaturedSec: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white py-12 pr-40 pl-40">
-      <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-8">Featured Products</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <section className="bg-white py-12 px-4 sm:px-6 lg:px-16">
+      <div className="container mx-auto">
+        <h2 className="text-2xl font-bold text-center sm:text-left mb-8">
+          Featured Products
+        </h2>
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {products.map((product) => (
-            <div key={product.id} className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
+            <div
+              key={product.id}
+              className="bg-gray-100 rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105"
+            >
               <div className="relative">
                 <Image
                   src={product.image || '/placeholder.png'} // Fallback to '/placeholder.png'
                   alt={product.title}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-48 object-cover"
                   width={500}
                   height={300}
                 />
@@ -53,8 +58,12 @@ const FeaturedSec: React.FC = () => {
                 )}
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-medium mb-2">{product.title}</h3>
-                <p className="text-gray-600 font-medium">{product.price}</p>
+                <h3 className="text-lg font-medium mb-2 text-center sm:text-left">
+                  {product.title}
+                </h3>
+                <p className="text-gray-600 font-medium text-center sm:text-left">
+                  {product.price}
+                </p>
               </div>
             </div>
           ))}

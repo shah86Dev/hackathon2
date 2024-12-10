@@ -25,18 +25,33 @@ const TopCategories: React.FC = () => {
   ];
 
   return (
-    <Card className="w-full pr-40 pl-40">
+    <Card className="w-full px-4 sm:px-6 lg:px-16 py-6">
       <CardHeader>
-        <CardTitle>Top Categories</CardTitle>
+        <CardTitle className="text-lg sm:text-xl lg:text-2xl text-center sm:text-left">
+          Top Categories
+        </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {categories.map((category) => (
-            <div key={category.id} className="bg-white rounded-lg shadow-md overflow-hidden">
-              <Image src={category.image} alt={category.title} className="h-64 w-full object-cover" width={500} height={256} />
-              <div className="p-4">
-                <h3 className="text-xl font-medium mb-2">{category.title}</h3>
-                <p className="text-gray-500 font-medium">{category.productCount} Products</p>
+            <div
+              key={category.id}
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+            >
+              <Image
+                src={category.image}
+                alt={category.title}
+                className="h-48 sm:h-64 w-full object-cover"
+                width={500}
+                height={256}
+              />
+              <div className="p-4 text-center sm:text-left">
+                <h3 className="text-base sm:text-lg font-medium mb-2">
+                  {category.title}
+                </h3>
+                <p className="text-gray-500 text-sm sm:text-base font-medium">
+                  {category.productCount} Products
+                </p>
               </div>
             </div>
           ))}
