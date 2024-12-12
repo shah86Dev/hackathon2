@@ -14,9 +14,9 @@ const CompanyLogos: React.FC = () => {
   ];
 
   return (
-    <Card className="w-full px-6 py-6">
+    <Card className="w-full px-4 py-6">
       <CardHeader>
-        <CardTitle className="text-center text-xl font-semibold">
+        <CardTitle className="text-center text-xl font-semibold mb-4">
           Our Partners
         </CardTitle>
       </CardHeader>
@@ -25,11 +25,11 @@ const CompanyLogos: React.FC = () => {
           {logos.map((logo) => (
             <div key={logo.id} className="flex justify-center items-center">
               <Image
-                src={logo.src || "/placeholder.png"} // Fallback if `src` is empty
+                src={logo.src || "/placeholder.png"}
                 alt={logo.alt}
-                width={48}
-                height={48}
-                className="h-12 w-auto hover:scale-125 transition-transform duration-300"
+                width={84}
+                height={84}
+                className="h-12 w-auto hover:scale-110 transition-transform duration-300"
               />
             </div>
           ))}
